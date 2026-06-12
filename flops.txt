@@ -1,0 +1,62 @@
+Total FLOPs: 8984724016
+Total No. of Parameters: 977229
+Total No. of Trainable Parameters: 977229
+| module                       | #parameters or shape   | #flops     |
+|:-----------------------------|:-----------------------|:-----------|
+| model                        | 0.977M                 | 8.985G     |
+|  main_unet                   |  0.941M                |  6.667G    |
+|   main_unet.enc1.conv        |   0.928K               |   67.109M  |
+|    main_unet.enc1.conv.0     |    0.864K              |    56.623M |
+|    main_unet.enc1.conv.1     |    64                  |    10.486M |
+|   main_unet.enc2.conv        |   18.56K               |   0.307G   |
+|    main_unet.enc2.conv.0     |    18.432K             |    0.302G  |
+|    main_unet.enc2.conv.1     |    0.128K              |    5.243M  |
+|   main_unet.enc3.conv        |   73.984K              |   0.305G   |
+|    main_unet.enc3.conv.0     |    73.728K             |    0.302G  |
+|    main_unet.enc3.conv.1     |    0.256K              |    2.621M  |
+|   main_unet.bottle           |   0.591M               |   2.426G   |
+|    main_unet.bottle.0        |    0.295M              |    1.213G  |
+|    main_unet.bottle.1        |    0.295M              |    1.213G  |
+|   main_unet.up2              |   0.131M               |   0.537G   |
+|    main_unet.up2.weight      |    (128, 64, 4, 4)     |            |
+|    main_unet.up2.bias        |    (64,)               |            |
+|   main_unet.dec2.conv        |   73.856K              |   1.213G   |
+|    main_unet.dec2.conv.0     |    73.728K             |    1.208G  |
+|    main_unet.dec2.conv.1     |    0.128K              |    5.243M  |
+|   main_unet.up1              |   32.8K                |   0.537G   |
+|    main_unet.up1.weight      |    (64, 32, 4, 4)      |            |
+|    main_unet.up1.bias        |    (32,)               |            |
+|   main_unet.dec1.conv        |   18.496K              |   1.218G   |
+|    main_unet.dec1.conv.0     |    18.432K             |    1.208G  |
+|    main_unet.dec1.conv.1     |    64                  |    10.486M |
+|   main_unet.out_conv         |   0.867K               |   56.623M  |
+|    main_unet.out_conv.weight |    (3, 32, 3, 3)       |            |
+|    main_unet.out_conv.bias   |    (3,)                |            |
+|  dehaze                      |  21.252K               |  1.374G    |
+|   dehaze.net                 |   19.488K              |   1.298G   |
+|    dehaze.net.0.conv         |    0.928K              |    67.109M |
+|    dehaze.net.1              |    18.56K              |    1.229G  |
+|    dehaze.net.2              |                        |    2.097M  |
+|   dehaze.t_conv              |   1.185K               |   75.497M  |
+|    dehaze.t_conv.0           |    0.896K              |    56.623M |
+|    dehaze.t_conv.2           |    0.289K              |    18.874M |
+|   dehaze.A_fc                |   0.579K               |   0.56K    |
+|    dehaze.A_fc.0             |    0.528K              |    0.512K  |
+|    dehaze.A_fc.2             |    51                  |    48      |
+|  color.curve_net             |  11.011K               |  0.717G    |
+|   color.curve_net.0          |   0.896K               |   56.623M  |
+|    color.curve_net.0.weight  |    (32, 3, 3, 3)       |            |
+|    color.curve_net.0.bias    |    (32,)               |            |
+|   color.curve_net.2          |   9.248K               |   0.604G   |
+|    color.curve_net.2.weight  |    (32, 32, 3, 3)      |            |
+|    color.curve_net.2.bias    |    (32,)               |            |
+|   color.curve_net.4          |   0.867K               |   56.623M  |
+|    color.curve_net.4.weight  |    (3, 32, 3, 3)       |            |
+|    color.curve_net.4.bias    |    (3,)                |            |
+|  fuse.attention              |  3.491K                |  0.226G    |
+|   fuse.attention.0           |   2.624K               |   0.17G    |
+|    fuse.attention.0.weight   |    (32, 9, 3, 3)       |            |
+|    fuse.attention.0.bias     |    (32,)               |            |
+|   fuse.attention.2           |   0.867K               |   56.623M  |
+|    fuse.attention.2.weight   |    (3, 32, 3, 3)       |            |
+|    fuse.attention.2.bias     |    (3,)                |            |
