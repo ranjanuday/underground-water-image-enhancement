@@ -54,7 +54,7 @@ Learns adaptive pixel-wise weights to combine outputs from all branches and gene
 > Add your architecture diagram below.
 
 <p align="center">
-  <img src="images/architecture.png" alt="UIE-Net Architecture" width="900"/>
+  <img src="https://github.com/ranjanuday/underground-water-image-enhancement/blob/main/Architecture%20diagram.png?raw=true" alt="UIE-Net Architecture" width="900"/>
 </p>
 
 ---
